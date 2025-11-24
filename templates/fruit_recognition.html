@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Nutrition Scanner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fruit.css') }}">
+</head>
+<body class="p-4 md:p-10">
+
+    <!-- Back Button -->
+    <div class="max-w-4xl mx-auto mb-4">
+        <a href="/" class="inline-flex items-center text-green-600 hover:text-green-800 font-semibold">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            </svg>
+            Back to Home
+        </a>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800">Unbarcoded Produce Scanner</h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Left Panel: Video Feed -->
+            <div class="card bg-white p-4 rounded-xl">
+                <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">Camera Feed (Live)</h2>
+                
+                <!-- CAMERA STATUS / SELECTION -->
+                <div class="mb-4">
+                    <label for="camera-status" class="block text-sm font-medium text-gray-700">Active Camera:</label>
+                    <div id="camera-status" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-gray-100 rounded-md shadow-sm sm:text-sm font-semibold text-red-600">
+                        Checking camera initialization...
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Live Camera Feed">
+                    <div class="absolute top-0 left-0 bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-br-lg">
+                        Real-time Video Stream
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Results -->
+            <div class="card bg-white p-6 rounded-xl space-y-6">
+                <h2 class="text-2xl font-semibold text-center text-green-600">Detection & Nutritional Info</h2>
+                
+                <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-lg" role="alert">
+                    <p class="font-bold">Latest Detected Item:</p>
+                    <p id="detection-status" class="mt-1 text-lg font-medium text-blue-900">Ready to scan. Click 'Scan' to capture a frame.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-xl font-semibold text-gray-700 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Nutritional Facts (Local Data)
+                    </h3>
+                    <div id="nutritional-info" class="bg-gray-50 p-4 rounded-lg text-gray-600 text-sm leading-relaxed min-h-[150px]">
+                        Results will appear here after a scan.
+                    </div>
+                </div>
+
+                <button id="scan-button" class="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-150 shadow-lg">
+                    SCAN NOW
+                </button>
+            </div>
+        </div>
+
+        <p class="text-center text-xs text-gray-500 mt-6">
+            Note: Computer Vision (CNN) runs locally via Flask. Nutritional data is loaded from local JSON.
+        </p>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/fruit.js') }}"></script>
+    <script>
+        // Pass the active_index from Flask to JavaScript
+        const ACTIVE_INDEX = "{{ active_index }}";
+    </script>
+</body>
+</html>

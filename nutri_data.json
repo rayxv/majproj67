@@ -1,0 +1,326 @@
+[
+  {
+    "name": "apple",
+    "calories": 52,
+    "carbs": 13.8,
+    "sugar": 10.4,
+    "protein": 0.3,
+    "fiber": 2.4,
+    "vitamins": "Vitamin C, Potassium"
+  },
+  {
+    "name": "banana",
+    "calories": 89,
+    "carbs": 22.8,
+    "sugar": 12.2,
+    "protein": 1.1,
+    "fiber": 2.6,
+    "vitamins": "Vitamin B6, Potassium, Magnesium"
+  },
+  {
+    "name": "beetroot",
+    "calories": 43,
+    "carbs": 9.6,
+    "sugar": 6.8,
+    "protein": 1.6,
+    "fiber": 2.8,
+    "vitamins": "Folate, Manganese, Vitamin C"
+  },
+  {
+    "name": "bell pepper",
+    "calories": 31,
+    "carbs": 6.0,
+    "sugar": 4.2,
+    "protein": 1.0,
+    "fiber": 2.1,
+    "vitamins": "Vitamin C, Vitamin A, Vitamin B6"
+  },
+  {
+    "name": "cabbage",
+    "calories": 25,
+    "carbs": 5.8,
+    "sugar": 3.2,
+    "protein": 1.3,
+    "fiber": 2.5,
+    "vitamins": "Vitamin C, Vitamin K"
+  },
+  {
+    "name": "capsicum",
+    "calories": 20,
+    "carbs": 4.6,
+    "sugar": 2.4,
+    "protein": 0.9,
+    "fiber": 1.7,
+    "vitamins": "Vitamin C, Vitamin A"
+  },
+  {
+    "name": "carrot",
+    "calories": 41,
+    "carbs": 9.6,
+    "sugar": 4.7,
+    "protein": 0.9,
+    "fiber": 2.8,
+    "vitamins": "Vitamin A, Biotin, Vitamin K1"
+  },
+  {
+    "name": "cauliflower",
+    "calories": 25,
+    "carbs": 5.0,
+    "sugar": 1.9,
+    "protein": 1.9,
+    "fiber": 2.0,
+    "vitamins": "Vitamin C, Vitamin K, Folate"
+  },
+  {
+    "name": "chilli pepper",
+    "calories": 40,
+    "carbs": 8.8,
+    "sugar": 5.3,
+    "protein": 1.9,
+    "fiber": 1.5,
+    "vitamins": "Vitamin C, Vitamin B6"
+  },
+  {
+    "name": "corn",
+    "calories": 96,
+    "carbs": 21.0,
+    "sugar": 4.5,
+    "protein": 3.4,
+    "fiber": 2.4,
+    "vitamins": "Thiamin (B1), Folate, Magnesium"
+  },
+  {
+    "name": "cucumber",
+    "calories": 15,
+    "carbs": 3.6,
+    "sugar": 1.7,
+    "protein": 0.7,
+    "fiber": 1.5,
+    "vitamins": "Vitamin K, Vitamin C"
+  },
+  {
+    "name": "eggplant",
+    "calories": 25,
+    "carbs": 5.9,
+    "sugar": 3.5,
+    "protein": 1.0,
+    "fiber": 3.0,
+    "vitamins": "Manganese, Vitamin B6"
+  },
+  {
+    "name": "garlic",
+    "calories": 149,
+    "carbs": 33.0,
+    "sugar": 1.0,
+    "protein": 6.4,
+    "fiber": 2.1,
+    "vitamins": "Vitamin C, Vitamin B6, Manganese"
+  },
+  {
+    "name": "ginger",
+    "calories": 80,
+    "carbs": 17.8,
+    "sugar": 1.7,
+    "protein": 1.8,
+    "fiber": 2.0,
+    "vitamins": "Vitamin B6, Potassium, Magnesium"
+  },
+  {
+    "name": "grapes",
+    "calories": 69,
+    "carbs": 18.1,
+    "sugar": 15.4,
+    "protein": 0.7,
+    "fiber": 0.9,
+    "vitamins": "Vitamin K, Vitamin C"
+  },
+  {
+    "name": "jalepeno",
+    "calories": 29,
+    "carbs": 6.5,
+    "sugar": 4.1,
+    "protein": 0.9,
+    "fiber": 2.8,
+    "vitamins": "Vitamin C, Vitamin B6"
+  },
+  {
+    "name": "kiwi",
+    "calories": 61,
+    "carbs": 14.7,
+    "sugar": 9.0,
+    "protein": 1.1,
+    "fiber": 3.0,
+    "vitamins": "Vitamin C, Vitamin K"
+  },
+  {
+    "name": "lemon",
+    "calories": 29,
+    "carbs": 9.3,
+    "sugar": 2.5,
+    "protein": 1.1,
+    "fiber": 2.8,
+    "vitamins": "Vitamin C"
+  },
+  {
+    "name": "lettuce",
+    "calories": 15,
+    "carbs": 2.9,
+    "sugar": 0.8,
+    "protein": 1.4,
+    "fiber": 1.3,
+    "vitamins": "Vitamin K, Vitamin A, Folate"
+  },
+  {
+    "name": "mango",
+    "calories": 60,
+    "carbs": 15.0,
+    "sugar": 13.7,
+    "protein": 0.8,
+    "fiber": 1.6,
+    "vitamins": "Vitamin C, Vitamin A"
+  },
+  {
+    "name": "onion",
+    "calories": 40,
+    "carbs": 9.3,
+    "sugar": 4.2,
+    "protein": 1.1,
+    "fiber": 1.7,
+    "vitamins": "Vitamin C, Vitamin B6, Manganese"
+  },
+  {
+    "name": "orange",
+    "calories": 47,
+    "carbs": 11.8,
+    "sugar": 9.4,
+    "protein": 0.9,
+    "fiber": 2.4,
+    "vitamins": "Vitamin C, Folate"
+  },
+  {
+    "name": "paprika",
+    "calories": 289,
+    "carbs": 55.7,
+    "sugar": 51.0,
+    "protein": 14.8,
+    "fiber": 10.5,
+    "vitamins": "Vitamin A, Vitamin E, Vitamin B6"
+  },
+  {
+    "name": "pear",
+    "calories": 57,
+    "carbs": 15.2,
+    "sugar": 9.8,
+    "protein": 0.4,
+    "fiber": 3.1,
+    "vitamins": "Vitamin C, Vitamin K"
+  },
+  {
+    "name": "peas",
+    "calories": 81,
+    "carbs": 14.4,
+    "sugar": 5.7,
+    "protein": 5.4,
+    "fiber": 5.1,
+    "vitamins": "Vitamin K, Vitamin C, Thiamin"
+  },
+  {
+    "name": "pineapple",
+    "calories": 50,
+    "carbs": 13.1,
+    "sugar": 9.9,
+    "protein": 0.5,
+    "fiber": 1.4,
+    "vitamins": "Vitamin C, Manganese"
+  },
+  {
+    "name": "pomegranate",
+    "calories": 83,
+    "carbs": 18.7,
+    "sugar": 13.7,
+    "protein": 1.7,
+    "fiber": 4.0,
+    "vitamins": "Vitamin K, Vitamin C, Folate"
+  },
+  {
+    "name": "potato",
+    "calories": 77,
+    "carbs": 17.5,
+    "sugar": 0.8,
+    "protein": 2.0,
+    "fiber": 2.2,
+    "vitamins": "Vitamin C, Vitamin B6, Potassium"
+  },
+  {
+    "name": "raddish",
+    "calories": 16,
+    "carbs": 3.4,
+    "sugar": 1.9,
+    "protein": 0.7,
+    "fiber": 1.6,
+    "vitamins": "Vitamin C"
+  },
+  {
+    "name": "soy beans",
+    "calories": 147,
+    "carbs": 9.9,
+    "sugar": 3.0,
+    "protein": 12.9,
+    "fiber": 6.0,
+    "vitamins": "Vitamin K, Folate, Iron"
+  },
+  {
+    "name": "spinach",
+    "calories": 23,
+    "carbs": 3.6,
+    "sugar": 0.4,
+    "protein": 2.9,
+    "fiber": 2.2,
+    "vitamins": "Vitamin A, Vitamin K, Folate"
+  },
+  {
+    "name": "sweetcorn",
+    "calories": 86,
+    "carbs": 19.0,
+    "sugar": 6.2,
+    "protein": 3.3,
+    "fiber": 2.4,
+    "vitamins": "Thiamin (B1), Vitamin C, Folate"
+  },
+  {
+    "name": "sweetpotato",
+    "calories": 86,
+    "carbs": 20.1,
+    "sugar": 4.2,
+    "protein": 1.6,
+    "fiber": 3.0,
+    "vitamins": "Vitamin A, Vitamin C, Manganese"
+  },
+  {
+    "name": "tomato",
+    "calories": 18,
+    "carbs": 3.9,
+    "sugar": 2.6,
+    "protein": 0.9,
+    "fiber": 1.2,
+    "vitamins": "Vitamin C, Potassium, Vitamin K1"
+  },
+  {
+    "name": "turnip",
+    "calories": 28,
+    "carbs": 6.4,
+    "sugar": 3.8,
+    "protein": 0.9,
+    "fiber": 1.8,
+    "vitamins": "Vitamin C"
+  },
+  {
+    "name": "watermelon",
+    "calories": 30,
+    "carbs": 7.6,
+    "sugar": 6.2,
+    "protein": 0.6,
+    "fiber": 0.4,
+    "vitamins": "Vitamin C, Vitamin A"
+  }
+]

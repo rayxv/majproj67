@@ -1,0 +1,172 @@
+/* Fruit Recognition Specific Styles */
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f7f9fc; 
+}
+
+.card { 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+}
+
+#video-feed { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 0.75rem; 
+    border: 4px solid #3b82f6;
+    display: block;
+}
+
+/* Camera Status Styles */
+#camera-status {
+    transition: all 0.3s ease;
+}
+
+#camera-status.text-green-600 {
+    background-color: #d1fae5;
+    border-color: #10b981;
+}
+
+#camera-status.text-red-600 {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+}
+
+/* Detection Status Box */
+.bg-blue-100 {
+    transition: all 0.3s ease;
+}
+
+/* Nutritional Info Table */
+#nutritional-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#nutritional-info thead {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+#nutritional-info th {
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #047857;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#nutritional-info td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    color: #1f2937;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#nutritional-info tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+#nutritional-info tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Scan Button Pulse Animation */
+#scan-button {
+    position: relative;
+    overflow: hidden;
+}
+
+#scan-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+#scan-button:active {
+    transform: translateY(0);
+}
+
+#scan-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Video Feed Container */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Success/Error Messages */
+.success-message {
+    background-color: #d1fae5;
+    border-left: 4px solid #10b981;
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}

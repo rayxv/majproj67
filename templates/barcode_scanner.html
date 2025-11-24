@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barcode Scanner</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/barcode.css') }}">
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Back Button -->
+  <div class="container mx-auto px-4 pt-4">
+    <a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      Back to Home
+    </a>
+  </div>
+
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center text-blue-600 mb-8">📱 Barcode Scanner</h1>
+
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto">
+      <div class="camera-container mb-6">
+        <video id="video" autoplay playsinline></video>
+        <div class="scan-area"></div>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 mb-6">
+        <div class="flex flex-wrap justify-center gap-4 w-full">
+          <button id="startButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+            Start Camera
+          </button>
+          <button id="captureButton" disabled class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition-colors opacity-50 cursor-not-allowed">
+            Scan Barcode
+          </button>
+
+          <div class="relative">
+            <button id="cameraDropdownButton" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center">
+              <span id="currentCamera">Switch Camera</span>
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div id="cameraDropdown" class="hidden absolute z-10 mt-1 w-48 bg-white rounded-md shadow-lg">
+              <div id="cameraList" class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="cameraDropdownButton"></div>
+            </div>
+          </div>
+        </div>
+        <div id="cameraInfo" class="text-sm text-gray-500"></div>
+      </div>
+
+      <div id="result" class="text-center mb-6">
+        <p id="status" class="text-gray-600">Press 'Start Camera' to begin</p>
+      </div>
+
+      <div id="productCard" class="product-card bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <div class="flex justify-between items-start">
+          <h2 class="text-xl font-semibold mb-4" id="productName">Product Name</h2>
+          <div>
+            <span id="barcodeType" class="text-sm text-gray-500 bg-gray-200 px-2 py-1 rounded mr-2"></span>
+            <span id="nutriScore" class="nutri-score" style="display: none;"></span>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div><p class="text-sm text-gray-500">Brand</p><p id="productBrand" class="font-medium">-</p></div>
+          <div><p class="text-sm text-gray-500">Sugar (per 100g)</p><p id="productSugar" class="font-medium">-</p></div>
+          <div><p class="text-sm text-gray-500">Calories (per 100g)</p><p id="productCalories" class="font-medium">-</p></div>
+          <div><p class="text-sm text-gray-500">Fat (g)</p><p id="productFat" class="font-medium">-</p></div>
+          <div><p class="text-sm text-gray-500">Carbs (g)</p><p id="productCarbs" class="font-medium">-</p></div>
+          <div><p class="text-sm text-gray-500">Protein (g)</p><p id="productProtein" class="font-medium">-</p></div>
+        </div>
+        
+        <div class="mt-4">
+          <p class="text-sm text-gray-500">Ingredients</p>
+          <p id="productIngredients" class="text-sm">-</p>
+        </div>
+        
+        <div id="analysisSection" class="analysis-section">
+          <div class="flex items-center mb-2">
+            <p class="text-sm text-gray-500 mr-2">Health Analysis</p>
+            <span id="analysisSource" class="text-xs text-gray-400"></span>
+          </div>
+          
+          <div id="healthAnalysis" class="mb-3 text-sm"></div>
+          
+          <div class="mb-3">
+            <p class="text-sm text-gray-500 mb-1">Potential Health Warnings</p>
+            <div id="healthWarnings" class="flex flex-wrap gap-1"></div>
+          </div>
+          
+          <div>
+            <p class="text-sm text-gray-500 mb-1">Detected Allergens</p>
+            <div id="allergens" class="flex flex-wrap gap-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="canvas" style="display: none;"></canvas>
+
+  <script src="{{ url_for('static', filename='js/barcode.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Scanner Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title"> Smart Kiosk </h1>
+            <p class="subtitle">Choose your scanning method to discover nutritional information</p>
+        </header>
+
+        <div class="features-grid">
+            <!-- Barcode Scanner Card -->
+            <div class="feature-card barcode-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="2" height="16"></rect>
+                        <rect x="7" y="4" width="2" height="16"></rect>
+                        <rect x="11" y="4" width="2" height="16"></rect>
+                        <rect x="15" y="4" width="4" height="16"></rect>
+                    </svg>
+                </div>
+                <h2 class="feature-title">Barcode Scanner</h2>
+                <p class="feature-description">
+                    Scan packaged food barcodes to instantly retrieve comprehensive nutritional information, 
+                    ingredient analysis, and health warnings powered by AI.
+                </p>
+                <ul class="feature-list">
+                    <li>✓ Instant product lookup</li>
+                    <li>✓ AI-powered ingredient analysis</li>
+                    <li>✓ Nutri-Score calculation</li>
+                    <li>✓ Allergen detection</li>
+                </ul>
+                <a href="/barcode" class="feature-button barcode-button">
+                    Launch Barcode Scanner →
+                </a>
+            </div>
+
+            <!-- Fruit Recognition Card -->
+            <div class="feature-card fruit-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3 3 3 0 0 0-3-3H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <h2 class="feature-title">Fruit and Vegetable Recognition</h2>
+                <p class="feature-description">
+                    Point your camera at fresh fruits and vegetables to identify them and get detailed 
+                    nutritional information instantly using computer vision.
+                </p>
+                <ul class="feature-list">
+                    <li>✓ Real-time detection</li>
+                    <li>✓ CNN-based recognition</li>
+                    <li>✓ Live camera feed</li>
+                    <li>✓ Detailed nutrition facts</li>
+                </ul>
+                <a href="/fruit" class="feature-button fruit-button">
+                    Launch Fruit Scanner →
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="tech-stack">
+                <h3>Powered By:</h3>
+                <div class="tech-badges">
+                    <span class="badge">Flask</span>
+                    <span class="badge">TensorFlow</span>
+                    <span class="badge">OpenCV</span>
+                    <span class="badge">Gemini AI</span>
+                    <span class="badge">OpenFoodFacts</span>
+                </div>
+            </div>
+            <p class="footer-note">
+                Camera index: {{ active_index if active_index >= 0 else 'Not initialized' }}
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

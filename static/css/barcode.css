@@ -1,0 +1,195 @@
+/* Barcode Scanner Specific Styles */
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scan-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 30%;
+    border: 3px solid #3B82F6;
+    border-radius: 0.5rem;
+    pointer-events: none;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        border-color: #3B82F6;
+        opacity: 1;
+    }
+    50% {
+        border-color: #60A5FA;
+        opacity: 0.7;
+    }
+}
+
+.product-card {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Nutri-Score Styles */
+.nutri-score {
+    font-weight: bold;
+    font-size: 1.25rem;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.nutri-score-a { 
+    background-color: #038252; 
+    color: white; 
+}
+
+.nutri-score-b { 
+    background-color: #85bb2f; 
+    color: white; 
+}
+
+.nutri-score-c { 
+    background-color: #fef102; 
+    color: black; 
+}
+
+.nutri-score-d { 
+    background-color: #ee8100; 
+    color: white; 
+}
+
+.nutri-score-e { 
+    background-color: #e63e11; 
+    color: white; 
+}
+
+.nutri-score-unknown {
+    background-color: #9ca3af;
+    color: white;
+}
+
+/* Analysis Section */
+.analysis-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.warning-badge {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.warning-badge svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.25rem;
+}
+
+.allergen-chip {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Health Concerns */
+.health-concern-item {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.health-concern-item:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6b7280;
+}
+
+/* Environment Score */
+.environment-score {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.environment-score.poor {
+    background-color: #ef4444;
+}
+
+.environment-score.moderate {
+    background-color: #f59e0b;
+}
+
+.environment-score.good {
+    background-color: #10b981;
+}
+
+.environment-impact {
+    background-color: #f0fdf4;
+    border-left: 4px solid #10b981;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.environment-impact.poor {
+    background-color: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+.environment-impact.moderate {
+    background-color: #fffbeb;
+    border-left-color: #f59e0b;
+}
